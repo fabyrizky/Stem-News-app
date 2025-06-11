@@ -3,6 +3,7 @@ import pandas as pd
 from utils.skill_extractor import extract_skills
 from utils.career_mapper import map_career_path
 from utils.readiness_score import calculate_score
+from utils.course_recommender import recommend_courses
 
 # Load data
 industry_skills = pd.read_csv("data/industry_skills.csv")
