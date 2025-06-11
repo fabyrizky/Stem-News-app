@@ -1,0 +1,36 @@
+import streamlit as st
+import pandas as pd
+from utils.skill_extractor import extract_skills
+from utils.career_mapper import map_career_path
+from utils.readiness_score import calculate_score
+
+# Load data
+industry_skills = pd.read_csv("data/industry_skills.csv")
+course_catalog = pd.read_csv("data/course_catalog.csv")
+
+st.set_page_config(page_title="Career Shift Analyzer", page_icon="🚀")
+
+st.title("🚀 Career Shift to Future Industry")
+st.markdown("Analisis dan simulasi transisi karier Anda ke industri masa depan!")
+
+# Input user
+user_skills = st.text_area("Masukkan skill Anda (pisahkan dengan koma):")
+
+if st.button("🔍 Analisis"):
+    if user_skills:
+        skill_list = [s.strip().lower() for s in user_skills.split(",")]
+        extracted = extract_skills(skill_list, industry_skills)
+        mapping = map_career_path(skill_list, industry_skills)
+        score = calculate_score(skill_list, industry_skills)
+
+        st.subheader("🧠 Skill yang dikenali:")
+        st.write(extracted)
+
+        st.subheader("🔀 Rekomendasi Karier:")
+        st.write(mapping)
+
+        st.subheader("📊 Skor Kesiapan Industri Masa Depan:")
+        st.metric("Readiness Score", f"{score}/100")
+
+    else:
+        st.warning("Silakan masukkan skill terlebih dahulu.")
