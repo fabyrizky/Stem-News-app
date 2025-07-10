@@ -1,23 +1,32 @@
 # Future STEM News Intelligence
 
-Aplikasi web untuk mencari dan menganalisis berita STEM dengan rekomendasi personalisasi berdasarkan kepribadian pengguna.
+🔬 AI-powered STEM news analysis application with personalized recommendations.
 
-## Fitur
-- 🔍 Pencarian berita STEM real-time
-- 📊 Visualisasi data (grafik tren, word cloud)
-- 🎯 Rekomendasi karier/proyek berdasarkan kepribadian
-- 💾 Riwayat pencarian
+## Live Demo
+🚀 [Visit App](https://stem-news-app.streamlit.app)
 
-## Teknologi
-- Python 3.8+
-- Streamlit
-- NewsAPI
-- Pandas, Matplotlib, Plotly
+## Features
+- 🔍 Real-time STEM news search
+- 📊 Interactive data visualizations  
+- 🧠 Personalized career recommendations
+- 🤖 AI-generated insights
+- 📈 Trend analysis
 
-## Demo
-[Link Demo](https://your-app-name.streamlit.app)
+## Quick Start
+1. Get free API key from [NewsAPI](https://newsapi.org/register)
+2. Enter API key in the sidebar
+3. Take personality test for personalized recommendations
+4. Start searching STEM topics!
 
-## Cara Menjalankan Lokal
-```bash
-pip install -r requirements.txt
-streamlit run app.py
+## Technology Stack
+- **Frontend**: Streamlit
+- **Data Processing**: Pandas, NumPy
+- **Visualization**: Matplotlib, Plotly
+- **API**: NewsAPI
+- **Deployment**: Streamlit Cloud
+
+## Developer
+👨‍💻 **M Faby Rizky K**
+
+## License
+MIT License - feel free to use and modify!
